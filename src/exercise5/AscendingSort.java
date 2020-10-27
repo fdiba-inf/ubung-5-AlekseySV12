@@ -11,13 +11,22 @@ public class AscendingSort {
         int numberCount = input.nextInt();
 
         int[] numbers = new int[numberCount];
-
+        int temp;
         System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
+        for (int index = 0; index < numbers.length-1; index++){
+            for(int j=index+1;j<numbers.length;j++){
+                if(numbers[index]>numbers[j]){
+                    temp=numbers[index];
+                    numbers[index]=numbers[j];
+                    numbers[j]=temp;
+            }
 
-        // Sort numbers in ascending order
+            }
+        }
+
 
         String numbersAsString = Arrays.toString(numbers);
         System.out.println("Sorted numbers: " + numbersAsString);
