@@ -23,9 +23,10 @@ public class Search {
         for (int index = 0; index < numbers.length; index++){
             if(number==numbers[index]){
                 numberIndex=index;
+
                 break;
             }
-            index++;
+            
         }
 
         System.out.println("Number index: " + numberIndex);
