@@ -17,42 +17,22 @@ public class UniqueNumbers {
             numbers[index] = input.nextInt();
         }
 
-package exercise5;
-
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class UniqueNumbers {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter number count: ");
-        int numberCount = input.nextInt();
-
-        int[] numbers = new int[numberCount];
-
-        System.out.println("Enter numbers: ");
-        for (int index = 0; index < numbers.length; index++) {
-            numbers[index] = input.nextInt();
-        }
-
         int[] uniqueNumbers = new int[numbers.length];
-        uniqueNumbers[0]=numbers[0];
+        
+        int a=0;
         for (int i = 0; i < numbers.length; i++){
-           for(int j=i+1;j<numbers.length;j++){
-               int a=0;
-               if(numbers[i]==numbers[j]){
-
-                   a++;
+          
+           for(int j=0;j<numbers.length;j++){
+               
+               if(uniqueNumbers[j]==0){
+                  uniqueNumbers[j]=numbers[i];
                    break;
                }
-               else{
-                   uniqueNumbers[i+1-a]=numbers[j];
-                   break;
+               if(uniqueNumbers[j]==numbers[i]){
+                 break;
                }
-               }
-
-           }
+           }}
+               
 
 
 
@@ -65,5 +45,6 @@ public class UniqueNumbers {
 
 
     }
+    
 
 
